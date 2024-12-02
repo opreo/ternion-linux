@@ -2,7 +2,7 @@
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
-This is planned to become a Fedora Atomic Desktop base image featuring the [Trinity Desktop Environment](https://www.trinitydesktop.org). Doesn't currently exist.
+This is a highly experimental Fedora Atomic Desktop image featuring the Trinity Desktop Environment. I have no idea whether or not this actually works.
 
 ## Installation
 
