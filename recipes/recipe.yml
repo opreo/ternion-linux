@@ -70,7 +70,7 @@ modules:
       - trinity-amarok
       - trinity-amarok-konqueror
       - trinity-amarok-visualisation
-      - trinity-gtk-tqt-engine
+      - trinity-gtk-qt-engine
       - trinity-gtk3-tqt-engine
       - trinity-codeine
       - trinity-gwenview
