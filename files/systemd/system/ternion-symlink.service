@@ -1,7 +1,8 @@
 [Unit]
 Description=Ternion Linux /opt symlink hack
 Before=tdm.service
+WantedBy=tdm.service
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c "ln -s /usr/lib/opt/trinity /var/opt/trinity"
+ExecStart=/bin/bash -c "if [ -e /var/opt/trinity ]; then ln -s /usr/lib/opt/trinity /var/opt/trinity; fi"

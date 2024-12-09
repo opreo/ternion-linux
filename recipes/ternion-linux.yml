@@ -1,0 +1,15 @@
+# image will be published to ghcr.io/<user>/<name>
+name: ternion-linux
+# description will be included in the image's metadata
+description: An atomic Trinity desktop
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/base-main
+image-version: 41 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: common-prep.yml
+  - from-file: common-rpm.yml
+  - from-file: common-final.yml

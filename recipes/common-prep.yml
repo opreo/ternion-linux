@@ -1,0 +1,14 @@
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  # trinity is installed in /opt/trinity, so we need to symlink this to somewhere that can be stored in the immutable system
+  - type: script
+    snippets:
+      - "mkdir -p /usr/lib/opt/trinity"
+      - "mkdir -p /var/opt"
+      - "ln -s /usr/lib/opt/trinity /var/opt/trinity"
+      # - "setenforce 0" # fucking SELinux cucks TDM for some reason because SELinux always fucks everything up
+      # if you know how to fix this properly please do idk how to write SELinux policies
+      # I added this to /etc/ to bypass it permanently so hopefully that should work...

@@ -1,0 +1,30 @@
+# image will be published to ghcr.io/<user>/<name>
+name: ternion-linux-nvidia
+# description will be included in the image's metadata
+description: An atomic Trinity desktop
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/base-nvidia
+image-version: 41 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: common-prep.yml
+  # TODO: install NVIDIA Xorg driver (where the fuck?)
+  - from-file: common-rpm.yml
+  # - type: akmods
+  #   base: main
+  #   install:
+  #     - nvidia
+  - type: rpm-ostree
+    repos:
+    - https://negativo17.org/repos/fedora-nvidia.repo
+    install:
+      # - nvidia-open-kmod
+      # - nvidia-driver
+      # - nvidia-driver-libs
+      # - nvidia-driver-cuda
+      # - nvidia-driver-cuda-libs
+      - xorg-x11-nvidia # please work I fucking Beg
+  - from-file: common-final.yml
