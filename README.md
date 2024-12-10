@@ -2,11 +2,9 @@
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
-~~This is a highly experimental Fedora Atomic Desktop image featuring the Trinity Desktop Environment. I have no idea whether or not this actually works.~~
-
-# This image is NOT FUNCTIONAL, and this repo exists for testing and development purposes only. DO NOT INSTALL OR REBASE TO THIS.
-
-The Fedora packages for Trinity install into /opt, which is a user-writable directory in Fedora Atomic that cannot be written to at image build time. I doubt I'll ever fix this, but maybe I will if I get particularly bored.
+This is a highly experimental Fedora Atomic Desktop image featuring the Trinity Desktop Environment.
+Use `ternion-linux` for non-NVIDIA systems and `ternion-linux-nvidia` for systems with NVIDIA graphics.
+The image is technically usable, but it is not polished at all, and I recommend pinning your existing deployment before rebasing.
 
 ## Installation
 
