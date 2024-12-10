@@ -3,7 +3,9 @@
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
 This is a highly experimental Fedora Atomic Desktop image featuring the Trinity Desktop Environment.
+
 Use `ternion-linux` for non-NVIDIA systems and `ternion-linux-nvidia` for systems with NVIDIA graphics.
+
 The image is technically usable, but it is not polished at all, and I recommend pinning your existing deployment before rebasing.
 
 ## Installation
