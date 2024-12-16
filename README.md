@@ -15,7 +15,7 @@ The image is technically usable, but it is not polished at all, and I recommend 
 
 To rebase an existing atomic Fedora installation to the latest build:
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+- First, rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/luciascarlet/ternion-linux:latest
   ```
@@ -36,11 +36,15 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 ## ISO
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+If built on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).
+
+Unfortunately, these ISOs cannot be distributed on GitHub for free (due to their large sizes), so, for public projects, something else has to be used for hosting.
 
 ## Verification
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign).
+
+You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
 cosign verify --key cosign.pub ghcr.io/luciascarlet/ternion-linux
