@@ -36,7 +36,7 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 ## ISO
 
-If built on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).
+If you're using Fedora Atomic, you can generate an offline ISO image with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).
 
 Unfortunately, these ISOs cannot be distributed on GitHub for free (due to their large sizes), so, for public projects, something else has to be used for hosting.
 
