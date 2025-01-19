@@ -27,18 +27,18 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/luciascarlet/ternion-linux:latest
   ```
-- Reboot again to complete the installation
+- Reboot again to complete the installation:
   ```
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't accidentally get updated to the next major version.
 
 ## ISO
 
 If you're using Fedora Atomic, you can generate an offline ISO image with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).
 
-Unfortunately, these ISOs cannot be distributed on GitHub for free (due to their large sizes), so, for public projects, something else has to be used for hosting.
+Unfortunately, these ISOs can't be distributed on GitHub for free (due to their large sizes). As such, for public projects, something else has to be used for hosting.
 
 ## Verification
 
